@@ -15,9 +15,11 @@ services:
       # LOG_LEVEL: "3"
       # DEBUG: "true"
     network_mode: host
+    privileged: true
     devices:
       - /dev/bus:/dev/bus
 #      - /dev/dvb:/dev/dvb
+      - /dev/bus/usb/:/dev/bus/usb/:rw
     volumes:
       # ** CAUTION **
       # (default) `/usr/local/mirakurun/*` has been moved to `/opt/mirakurun/*`
